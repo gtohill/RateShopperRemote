@@ -2,7 +2,7 @@ from mysql.connector import connect
 
 
 def select_all():
-    cnx = connect(user='root', password='Gt153328@', host='localhost', database='exceldb')
+    cnx = connect(user='root', password='********', host='localhost', database='exceldb')
     cursor = cnx.cursor()
     query = ("SELECT DISTINCT id, company, one, two, three, four, five FROM Rate ORDER BY company")
     cursor.execute(query)
@@ -13,7 +13,7 @@ def select_all():
 
 
 def insert_rates(company, one, two, three, four, five):
-    cnx = connect(user='root', password='Gt153328@', host='localhost', database='exceldb')
+    cnx = connect(user='root', password='********', host='localhost', database='exceldb')
     cursor = cnx.cursor()
     try:
         query = ("INSERT INTO Rate(company, one, two, three, four, five) VALUES(%s,%s,%s,%s,%s,%s)")
